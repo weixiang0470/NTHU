@@ -1,0 +1,17 @@
+function Linear_FMS(A,Low,high)
+    if low==high then
+        return (A[low],A[low],A[low],A[low])
+    end if
+    mid = round((low + high)/2)
+    Left = Linear_FMS(A,low,mid)
+    Right = Linear_FMS(A,mid+1,high)
+    return Linear_FMCS(Left,Right)
+end function
+
+function Linear_FMCS(Left,Right)
+    TotalSum = Left.TotalSum + Right.TotalSum
+    MaxPrefix = max(_,_) //TODO
+    MaxSuffix = max(_,_) //TODO
+    MaxSum = max(_,_,_) // TODO
+    return (TotalSum,MaxPrefix,MaxSuffix,MaxSum)
+end function
