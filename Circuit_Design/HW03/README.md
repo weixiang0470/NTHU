@@ -25,5 +25,6 @@ noxim/
 7. Exercise 3 : Get the saturation point, tries several times to check relationship between PIR(packet injection rate) and Average delay
     - Use matplotlib to plot the graph of PIR and Average delay
 
+8. Exercise 4 : Try some different parameters and check the Dynamic energy used
 # **Commands**
 - `./noxim -config ../config_examples/my_config.yaml | grep Dynamic | awk '{print $5}' >>Dyna_0.1`
