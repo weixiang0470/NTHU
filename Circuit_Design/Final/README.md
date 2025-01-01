@@ -42,4 +42,12 @@ $(  ( W_{11},W_{12},W_{13},W_{14} ) ._1,
 6. PMOS's W = 0.72um
 
 ## **Hint**
-1. You may add buffers to strengthen the output valtage if necessary
+1. You may add buffers to strengthen the output voltage if necessary
+
+# Common commands
+- `source /usr/cad/synopsys/CIC/hspice.cshrc`
+    - source hspice
+    - `hspice -i h1.sp -o ./h1/h1.lis`
+- `source /usr/cad/synopsys/CIC/customexplorer.cshrc`
+    - source to waveview
+    - `wv file.tr0`

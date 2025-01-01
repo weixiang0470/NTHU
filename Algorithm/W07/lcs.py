@@ -1,3 +1,14 @@
+# PRINT-LCS(c, X, Y, i, j)
+#     if c[i, j] == 0
+#         return
+#     if X[i] == Y[j]
+#         PRINT-LCS(c, X, Y, i - 1, j - 1)
+#         print X[i]
+#     else if c[i - 1, j] > c[i, j - 1]
+#         PRINT-LCS(c, X, Y, i - 1, j)
+#     else
+#         PRINT-LCS(c, X, Y, i, j - 1)
+
 def lcs_length_constant_space(A, B):
     m, n = len(A), len(B)
     if m < n:
@@ -15,16 +26,6 @@ def lcs_length_constant_space(A, B):
             prev_value = temp  # 更新 prev_value 為下一次迭代做準備
         print(dp)
     return dp[n]
-# PRINT-LCS(c, X, Y, i, j)
-#     if c[i, j] == 0
-#         return
-#     if X[i] == Y[j]
-#         PRINT-LCS(c, X, Y, i - 1, j - 1)
-#         print X[i]
-#     else if c[i - 1, j] > c[i, j - 1]
-#         PRINT-LCS(c, X, Y, i - 1, j)
-#     else
-#         PRINT-LCS(c, X, Y, i, j - 1)
 def MEMOIZED_LCS_LENGTH(i, j):
     if c[i][j] != -1:
         return c[i][j]
